@@ -1,6 +1,10 @@
 const Main = () => {
     return (
-        <main> This is Main Section</main>
+        <main> 
+            <article>Article 1</article>
+            <article>Article 2</article>
+            <article>Article 3</article>
+        </main>
     )
 }
 
