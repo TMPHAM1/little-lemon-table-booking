@@ -8,12 +8,12 @@ const Nav = () => {
         <nav>
             <div className="nav-container">
                     <img src={LittleLemonLogo} className="nav-logo"></img>
-                    <Link to="/" className="nav-item">Home</Link>
-                    <Link to="/" className="nav-item">About</Link>
-                    <Link to="/" className="nav-item">Menu</Link>
-                  <Link to="/booking" className="nav-item">Reservations</Link>
-                  <Link to="/" className="nav-item">Order Online</Link>
-                  <Link to="/" className="nav-item">Login</Link>
+                    <Link to="/" className="nav-item">HOME</Link>
+                    <Link to="/" className="nav-item">ABOUT</Link>
+                    <Link to="/" className="nav-item">MENU</Link>
+                  <Link to="/booking" className="nav-item">RESERVATIONS</Link>
+                  <Link to="/" className="nav-item">ORDER ONLINE</Link>
+                  <Link to="/" className="nav-item">LOGIN</Link>
                 </div>
         </nav>
     )

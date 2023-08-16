@@ -1,6 +1,11 @@
+import LittleLemonFooterLogo from "../assets/foot-logo.png"
+
 const Footer = () => {
     return (
-        <footer> his is my footer</footer>
+        <footer>
+            <img src={LittleLemonFooterLogo}/>
+            Copyright &copy;Little Lemon Restaurant
+        </footer>
     )
 }
 
