@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Special = (props) => {
-    console.log('THIS IS PROPS', props)
     const {item, image, price, description} = props;
     const orderOnline = "Order Online ->"
     return ( <article>

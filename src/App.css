@@ -50,6 +50,12 @@ footer {
   background-color: #85C9CA;
   text-align: center;
   padding: 2em;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+footer img {
+  width: 30px;
 }
 
 article {
@@ -110,4 +116,5 @@ font-weight: bolder;
   padding: 1em 2em;
   border-radius: 16px;
   border: none;
+  cursor: pointer;
 }

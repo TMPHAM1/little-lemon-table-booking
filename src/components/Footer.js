@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer>
             <img src={LittleLemonFooterLogo}/>
-            Copyright &copy;Little Lemon Restaurant
+            <span>Copyright &copy;Little Lemon Restaurant </span>
         </footer>
     )
 }
