@@ -18,6 +18,8 @@ const BookingPage = () => {
     const [time, setTime] = useState();
     const [availableTimes, setAvailableTimes] = useState(["None Available"]);
       
+    
+
     useEffect(()=>{
       //had to mcok this since get call was not working properly
       const newAvailableTimes = fetchAPI(date);
