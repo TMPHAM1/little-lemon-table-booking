@@ -7,7 +7,7 @@ const Special = (props) => {
         <div className='special-container'>
             <img className="special-img" src={image}></img>
             <div className="special-details">
-                <div class="price-line">
+                <div className="price-line">
                     <h5>{item}</h5>
                     <span style={{color: 'orange'}}>${price}</span>
                 </div>

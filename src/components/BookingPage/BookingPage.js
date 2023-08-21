@@ -5,45 +5,31 @@ import HeroLogo from '../../assets/hero-logo.png';
 import Header from '../Header/Header';
 import './BookingPage.css';
 import BookingForm from './BookingForm'
+import {fetchAPI} from '../../helpers'
 
 const BookingPage = () => {
     const title = "Little Lemon";
     const description = "Welcome and we are excited to your next dining adventure with us here at Little Leomon";
     const subtitle = "Chicago"
-    const defaultDate = new Date().toJSON().slice(0,10);
+    const defaultDate = new Date();
     const [date, setDate] = useState(defaultDate);
     const [guests, setGuests] = useState(0);
     const [occasion, setOccasion] = useState('Birthday');
     const [time, setTime] = useState();
-    const [availableTimes, setAvailableTimes] = useState(['17:00', '18:00', '19:00', '20:00', '21:00', '22:00']);
-      const fetchData = () => { 
-        const opts = {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'cors': 'no-cors'
-            },
-            body: JSON.stringify({
-              date
-            })
-        }
-        const apiURL = 'https://raw.githubusercontent.com/Meta-Front-End-Developer-PC/capstone/master/api.js'
-        fetch(apiURL, opts) 
-          .then((response) => response.json()) 
-          .then(jsonData => {
-            console.log(jsonData);
-            setAvailableTimes(jsonData)}) 
-          .catch((error) => console.log(error)); 
-      }; 
+    const [availableTimes, setAvailableTimes] = useState(["None Available"]);
       
     useEffect(()=>{
-        fetchData();
-    }, [])
+      //had to mcok this since get call was not working properly
+      const newAvailableTimes = fetchAPI(date);
+        setAvailableTimes(newAvailableTimes);
+        setTime(newAvailableTimes[0]);
+        
+    }, [date])
     return (
         <>
-                <Header title={title} description={description} image={HeroLogo} subtitle={subtitle} showButton={false} />
+        <Header title={title} description={description} image={HeroLogo} subtitle={subtitle} showButton={false} />
         <div className='booking-container'>
-        <h2>Reserve Now</h2>
+        <h2>Reserve Now</h2>    
         <BookingForm 
         date={date}
         guests={guests}

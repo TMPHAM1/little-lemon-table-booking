@@ -1,7 +1,7 @@
 const BookingForm = (props) => {
     const {date, time, availableTimes, guests, occasion, setDate, setTime, setOccasion, setGuests} = props
     const clearForm = () => {
-        const defaultDate = new Date().toJSON().slice(0,10)
+        const defaultDate = new Date()
         setTime('')
         setOccasion('Birthday')
         setDate(defaultDate)
@@ -25,7 +25,7 @@ const BookingForm = (props) => {
         <fieldset>
     <div className="Field">
     <label for="date"><span>Choose Date</span></label>
-    <input type="date" onChange={(e)=> {setDate(e.target.value)}} id="date" value={date} />
+    <input type="date" onChange={(e)=> {setDate(new Date(e.target.value))}} id="date" value={date.toJSON().slice(0,10)} />
     </div>
     <div className="Field">
     <label for="time"><span>Choose Time</span></label>
