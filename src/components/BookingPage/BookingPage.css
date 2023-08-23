@@ -1,12 +1,20 @@
 .booking-container {
     display: grid;
     justify-content: center;
+    text-align: center;
 }
 
 .underline {
     text-decoration: underline;
 }
   
+
+  form {
+    display: grid;
+    gap: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
   fieldset {
     display: flex;
     width: 480px;
@@ -17,6 +25,7 @@
   }
   
   label {
+  
     margin-bottom: 8px;
     font-size: 14px;
   }
