@@ -32,17 +32,17 @@ const BookingForm = (props) => {
         <fieldset>
         <div className="Field">
     <label for="name" required><span>Enter Name</span></label>
-    <input type="text"  onBlur={onBlur} onChange={(e)=> {dispatch({type: 'update-name', value: e.target.value})}} id="name" value={name}  placeholder={"Enter Full Name"} />
+    <input  aria-label="On Change"  type="text"  onBlur={onBlur} onChange={(e)=> {dispatch({type: 'update-name', value: e.target.value})}} id="name" value={name}  placeholder={"Enter Full Name"} />
     {!name && blurStatus["name"] ? errorMessage('Please Enter a name') : ''}
     </div>
     <div className="Field">
     <label for="date"><span>Choose Date</span></label>
-    <input type="date" onChange={(e)=> {
+    <input aria-label="On Change"  type="date" onChange={(e)=> {
       dispatch({type: 'update-date', value: new Date(e.target.value)})}} id="date" value={date.toJSON().slice(0,10)} />
     </div>
     <div className="Field">
     <label for="time"><span>Choose Time</span></label>
-    <select  onBlur={onBlur} id="time"  onChange={(e)=> {dispatch({type: 'update-time', value: e.target.value})}} value={time}>
+    <select aria-label="On Change"  onBlur={onBlur} id="time"  onChange={(e)=> {dispatch({type: 'update-time', value: e.target.value})}} value={time}>
         {<option value="">Select a Time</option>}
         {availableTimes.map(time => {
         return <option value={time}>{time}</option>})}
@@ -64,12 +64,12 @@ const BookingForm = (props) => {
     </div>
     <div className="Field">
     <label for="occasion"><span>Occasion</span></label>
-    <select id="occasion" value={occasion}  onChange={(e)=> {dispatch({type: 'update-occasion', value: e.target.value})}}>
+    <select id="occasion" value={occasion} aria-label="On Change"  onChange={(e)=> {dispatch({type: 'update-occasion', value: e.target.value})}}>
         <option value="Birthday">Birthday</option>
         <option value="Anniversary">Anniversary</option>
     </select>
     </div>
-    <button role="button"  disabled={!getIsFormValid()} type="submit" className='little-lemon-btn' onClick={handleSubmit}>Reserve Now</button>
+    <button role="button"  disabled={!getIsFormValid()} type="submit" className='little-lemon-btn' aria-label="On Click"  onClick={handleSubmit}>Reserve Now</button>
     </fieldset>
 </form>)
 }

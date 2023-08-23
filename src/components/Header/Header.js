@@ -13,7 +13,7 @@ const Header = (props) => {
                     <p style={{color: 'white'}}>
                      {description}
                     </p>
-                    {showButton ? <Link to={redirectTo}><button className='little-lemon-btn'><span>{buttonTitle}</span></button> </Link> : null}
+                    {showButton ? <Link to={redirectTo}><button  aria-label="On Click" className='little-lemon-btn'><span>{buttonTitle}</span></button> </Link> : null}
                     </div>
                     <div className='hero-img-container'>
                     <img className="hero-img" src={image} />

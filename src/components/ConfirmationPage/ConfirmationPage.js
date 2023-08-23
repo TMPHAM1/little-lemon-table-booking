@@ -23,7 +23,7 @@ const ConfirmationPage = (props) =>{
                 <div className="detail-row"><span>Time:</span><span>{time}</span></div>
                 <div className="detail-row"><span>Number of Guests:</span><span>{guests}</span></div>
                 <div className="detail-row"><span>Occasion:</span><span>{occasion}</span></div>
-                <Link to="/"><button className="little-lemon-btn" onClick={clearForm}>Return to Little Lemon</button></Link>
+                <Link to="/"><button aria-label="On Click"  className="little-lemon-btn" onClick={clearForm}>Return to Little Lemon</button></Link>
                 </div>
               
         </div>
